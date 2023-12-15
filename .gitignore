@@ -1,0 +1,104 @@
+# Ignore .env files
+.env*
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore compiled binary files
+*.pyc
+*.class
+
+# Ignore the output of build tools
+/build/
+
+# Ignore local development files
+*.local
+
+# Ignore database files
+*.sqlite
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Visual Studio Code settings folder
+.vscode/
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore package-lock.json for npm
+package-lock.json
+
+# Ignore yarn lock file
+yarn.lock
+
+# Ignore Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled Java classes
+*.class
+
+# Ignore JetBrains IDE files
+.idea/
+
+# Ignore Eclipse project files
+.classpath
+.project
+.settings/
+
+# Ignore Sublime Text project files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore virtual environment folder
+venv/
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore compiled LaTeX files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+
+# Ignore compiled C++ files
+*.out
+*.o
+
+# Ignore compiled Java files
+*.class
+
+# Ignore compiled Ruby files
+*.rbc
+
+# Ignore compiled Rust files
+/target/
+
+# Ignore compiled TypeScript files
+*.js
+*.js.map
+
+# Ignore compiled PHP files
+*.php
+*.phar
+
+# Ignore compiled Swift files
+*.swiftc
+
+# Ignore compiled MATLAB files
+*.mex*
+*.mexa64
+*.mexmaci
+*.mexmaci64
+*.mexw32
+
+# Ignore virtual environment
+venv/

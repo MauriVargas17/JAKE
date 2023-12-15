@@ -1,6 +1,6 @@
 import socket
 import subprocess
-import process_input from inference.py
+from inference import process_input
 
 def receive_data(port):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:

@@ -1,7 +1,12 @@
 import openai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+openai_key = os.getenv("OPENAIAPI-KEY")
 
 def process_input(data):
-    openai.api_key = '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'  # Replace with your OpenAI API key
+    openai.api_key = openai_key
     if not data.contains('Start speaking') or not data.contains('2k'):
         
         # Set up the prompt and other parameters
