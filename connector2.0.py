@@ -18,14 +18,16 @@ def receive_data(port):
 
                 if not data:
                     break
-                print(f":3 {data.decode('utf-8')}")
+                print(f"Received data: {data.decode('utf-8')}")
                 # Emulate the command: echo 'data' | ./piper/piper --model ... --output_f>
+                response = process_input(data.decode('utf-8'))
                 process_echo = subprocess.Popen(
-                    ['echo', '-n', process_input(data.decode('utf-8'))],
+                    ['echo', '-n', response],
                     stdout=subprocess.PIPE,
                     text=True
                 )
-
+                if response == '':
+                    continue
                 process_piper = subprocess.Popen(
                     ['./piper/piper', '--model', 'en-us-amy-low.onnx', '--output_file', 'welcome.wav'],
                     stdin=process_echo.stdout,
