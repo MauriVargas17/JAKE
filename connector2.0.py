@@ -3,6 +3,7 @@ import subprocess
 from inference import process_input
 
 def receive_data(port):
+    
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         server_socket.bind(('localhost', port))
         server_socket.listen()
@@ -13,14 +14,15 @@ def receive_data(port):
 
         with conn:
             while True:
-                data = conn.recv(1024)                
+                data = conn.recv(1024)
 
 
                 if not data:
                     break
-                print(f"Received data: {data.decode('utf-8')}")
+                data_decoded = data.decode('utf-8')
+                print(f"Received data: {data_decoded}")
                 # Emulate the command: echo 'data' | ./piper/piper --model ... --output_f>
-                response = process_input(data.decode('utf-8'))
+                response = process_input(data_decoded)
                 process_echo = subprocess.Popen(
                     ['echo', '-n', response],
                     stdout=subprocess.PIPE,
@@ -43,4 +45,4 @@ def receive_data(port):
                 subprocess.run(['paplay', 'welcome.wav'])
 
 if __name__ == "__main__":
-    receive_data(12346)  # Use the port you choose for communication
+    receive_data(12345)  # Use the port you choose for communication
