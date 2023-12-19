@@ -44,8 +44,8 @@ Ejecutar el Cooking Pal
 python cooking_pal.py
 ```
 
-[!IMPORTANT]
-Ahora el cooking pal, a quien nos referiremos como _Jake_ en cualquier interaccion que tengamos con el asistente (es obligatorio mencionar su nombre para que la interaccion sea procesada), estara escuchando en el puerto 12345 por datos para hacer decodificacion y procesamiento.
+> [!IMPORTANT]
+> Ahora el cooking pal, a quien nos referiremos como _Jake_ en cualquier interaccion que tengamos con el asistente (es obligatorio mencionar su nombre para que la interaccion sea procesada), estara escuchando en el puerto 12345 por datos para hacer decodificacion y procesamiento.
 
 Para ejecutar el reconocimiento de voz de Whisper C++ (habiendo ejecutado el cooking pal primero), estando en el root del repositorio clonado ejecutamos:
 
@@ -55,8 +55,8 @@ Para ejecutar el reconocimiento de voz de Whisper C++ (habiendo ejecutado el coo
 
 ¡Listo! Ahora podras interactuar con el cooking pal (UNICAMENTE EN INGLES por el momento).
 
-[!TIP]
-Para monitorear el rendimiento y la temperatura de la placa, se puede usar una herramienta llamada _btop_. Si no la tienes, puedes descargarla con:
+> [!TIP]
+> Para monitorear el rendimiento y la temperatura de la placa, se puede usar una herramienta llamada _btop_. Si no la tienes, puedes descargarla con:
 
 ```
 sudo apt update
